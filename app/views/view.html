@@ -1,0 +1,27 @@
+<div class="jumbotron" ng-init="init()">
+  <div class="row">
+    <div class="col-sm-6"> 
+        <table class="table table-hover">
+	    <thead>
+	      <tr class="text-center">
+	        <th>#</th>
+	        <th>Name</th>
+	        <th>Size</th>
+	        <th>Play</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr class="text-center" ng-repeat="video in videos">
+	        <td>{{$index+1}}</td>
+	        <td>{{video.name}}</td>
+	        <td>{{video.size | formatBytes:3 }}</td>
+	        <td><button class="btn-primary btn-sm" ng-click="playVideo(video)">Play</button></td>
+	      </tr>
+      	</tbody>
+      </table>
+    </div>
+    <div class="col-sm-6">
+    	<play-video ng-show="playing"></play-video>
+    </div>
+  </div>
+</div>

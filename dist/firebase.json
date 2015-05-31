@@ -1,0 +1,9 @@
+{
+  "firebase": "g-cloud",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
